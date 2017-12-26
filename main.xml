@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE descricao_corpo[
+<!ELEMENT descricao_corpo (nome,cor,portefisico,altura)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT cor (#PCDATA)>
+<!ELEMENT portefisico (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>
+]>
+<top>
+<descricao_corpo>
+<nome>Danilo Freitas</nome>
+<cor>Caucasiano</cor>
+<portefisico>Gordo</portefisico>
+<altura>Alto</altura>
+</descricao_corpo>
+
+<descricao_corpo>
+<nome>Danilo Frota</nome>
+<cor>Pardo</cor>
+<portefisico>Magricela</portefisico>
+<altura>Alto</altura>
+</descricao_corpo>
+
+<descricao_corpo>
+<nome>Danilo Fritas</nome>
+<cor>Negro</cor>
+<portefisico>Gordo</portefisico>
+<altura>Baixinho</altura>
+</descricao_corpo>
+
+<descricao_corpo>
+<nome>Danilo Frodo</nome>
+<cor>Asiático</cor>
+<portefisico>Gordo</portefisico>
+<altura>Baixinho</altura>
+</descricao_corpo>
+
+<descricao_corpo>
+<nome>Danilo Fritz</nome>
+<cor>Indígena</cor>
+<portefisico>Gordo</portefisico>
+<altura>Alto</altura>
+</descricao_corpo>
+</top>
