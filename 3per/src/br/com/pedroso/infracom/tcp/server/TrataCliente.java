@@ -26,6 +26,7 @@ public class TrataCliente extends Thread{
 			while(sc.hasNext()) {
 				
 			}
+			sc.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
