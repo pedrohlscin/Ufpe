@@ -2,7 +2,7 @@
 public class ImprimeWithNThreads implements Runnable {
 	int limite_inff = 0;
 	int limite_sup = 0;
-	static int contador;
+	public static volatile int contador;
 
 	public ImprimeWithNThreads(int inf, int sup) {
 		// TODO Auto-generated constructor stub
@@ -14,7 +14,7 @@ public class ImprimeWithNThreads implements Runnable {
 	public void run() {
 		for (int j = limite_inff; j < limite_sup; j++) {
 			contador = j;
-			System.out.println(contador);
+			System.out.println(Thread.currentThread().getName() + " - " + contador);
 		}
 	}
 	
