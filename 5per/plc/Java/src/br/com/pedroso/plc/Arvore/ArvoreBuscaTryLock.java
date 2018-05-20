@@ -3,14 +3,28 @@ package br.com.pedroso.plc.Arvore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ArvoreBuscaTryLock{
-	public static void main(String[] args) {
-		BinarySearchTreeTryLock arvore = new BinarySearchTreeTryLock();
+public class ArvoreBuscaTryLock implements Runnable {
+	static volatile BinarySearchTreeTryLock arvore = new BinarySearchTreeTryLock();
+
+	public static void main(String[] args) throws InterruptedException {
+		Thread threads[] = new Thread[4];
 		long start = System.currentTimeMillis();
-		for(int i = 0; i < 6000; i++) {
-			arvore.insert((int)Math.random()*10);
+		for (int i = 0; i < 4; i++) {
+			threads[i] = new Thread(new ArvoreBuscaTryLock());
+			threads[i].start();
+		}
+		for (int i = 0; i < 4; i++) {
+			threads[i].join();
 		}
 		System.out.println("Altura: " + arvore.depth(arvore.root) + ", Tempo: " + (System.currentTimeMillis() - start));
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i < 2000; i++) {
+			arvore.insert((int) Math.random() * 10);
+		}
+
 	}
 }
 
@@ -118,38 +132,46 @@ class BinarySearchTreeTryLock {
 	}
 
 	public void insert(int id) {
-		boolean t1 = l.tryLock();
-		try {
-			while(!t1) {
-				t1 = l.tryLock();
-			}
-			Node newNode = new Node(id);
-			if (root == null) {
-				root = newNode;
-				return;
-			}
-			Node current = root;
-			Node parent = null;
-			while (true) {
-				parent = current;
-				if (id < current.data) {
-					current = current.left;
-					if (current == null) {
-						parent.left = newNode;
-						return;
-					}
-				} else {
-					current = current.right;
-					if (current == null) {
-						parent.right = newNode;
-						return;
+		boolean t1 = false;
+		boolean t2 = false;
+		Node newNode = new Node(id);
+		if (root == null) {
+			root = newNode;
+			return;
+		}
+		Node current = root;
+		Node parent = null;
+		while (true) {
+			parent = current;
+			if (id < current.data) {
+				while (!t1) {
+					try {
+						t1 = l.tryLock();
+					} finally {
+						l.unlock();
 					}
 				}
+				current = current.left;
+				if (current == null) {
+					parent.left = newNode;
+					return;
+				}
+			} else {
+				current = current.right;
+				if (current == null) {
+					parent.right = newNode;
+					return;
+				}
 			}
-		}finally {
-			l.unlock();
 		}
+
 	}
+	// }finally
+	//
+	// {
+	// l.unlock();
+	//
+	// }
 
 	public void display(Node root) {
 		if (root != null) {
@@ -160,7 +182,7 @@ class BinarySearchTreeTryLock {
 	}
 
 	public int depth(Node no) {
-		if(no == null)
+		if (no == null)
 			return 0;
 		return 1 + Math.max(depth(no.left), depth(no.right));
 	}
