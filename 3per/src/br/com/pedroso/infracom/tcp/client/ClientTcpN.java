@@ -1,37 +1,63 @@
 package br.com.pedroso.infracom.tcp.client;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
 
 public class ClientTcpN {
-	public static void main(String argv[]) throws Exception {
-		String sentence;
-		String modifiedSentence;
 
-		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
+public static void main(String args[]) throws IOException{
 
-		Socket clientSocket = new Socket("localhost", 6789);
 
-		while (true) {
-			DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+    InetAddress address=InetAddress.getLocalHost();
+    Socket s1=null;
+    String line=null;
+    BufferedReader br=null;
+    BufferedReader is=null;
+    PrintWriter os=null;
 
-			BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+    try {
+        s1=new Socket(address, 4445); // You can use static final constant PORT_NUM
+        br= new BufferedReader(new InputStreamReader(System.in));
+        is=new BufferedReader(new InputStreamReader(s1.getInputStream()));
+        os= new PrintWriter(s1.getOutputStream());
+    }
+    catch (IOException e){
+        e.printStackTrace();
+        System.err.print("IO Exception");
+    }
 
-			sentence = inFromUser.readLine();
+    System.out.println("Client Address : "+address);
+    System.out.println("Enter Data to echo Server ( Enter QUIT to end):");
 
-			outToServer.writeBytes(sentence + '\n');
+    String response=null;
+    try{
+        line=br.readLine(); 
+        while(line.compareTo("QUIT")!=0){
+                os.println(line);
+                os.flush();
+                response=is.readLine();
+                System.out.println("Server Response : "+response);
+                line=br.readLine();
 
-			if (sentence.equals("EXIT")) {
-				break;
-			}
+            }
 
-			modifiedSentence = inFromServer.readLine();
 
-			System.out.println("FROM SERVER: " + modifiedSentence);
 
-		}
-		clientSocket.close();
-	}
+    }
+    catch(IOException e){
+        e.printStackTrace();
+    System.out.println("Socket read Error");
+    }
+    finally{
+
+        is.close();os.close();br.close();s1.close();
+                System.out.println("Connection Closed");
+
+    }
+
+}
 }
