@@ -1,0 +1,5 @@
+/bin/
+.classpath
+.idea/*
+5per/plc/Java/.idea/misc.xml
+5per/plc/Java/.idea/workspace.xml
