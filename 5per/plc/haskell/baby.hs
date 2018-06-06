@@ -8,3 +8,9 @@ doubleNumbersAboveOneHundred :: Int -> Int
 doubleNumbersAboveOneHundred x = if x < 100
                                    then doubleMe x
                                    else x
+
+onlyUpper :: [Char] -> [Char]
+onlyUpper xs = [c | c <- xs, c `elem` ['A'..'Z']]
+
+sumPairs :: (Num a) => [(a,a)] -> [a]
+sumPairs list = [(x+y) | (x,y) <- list]
