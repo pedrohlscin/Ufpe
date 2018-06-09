@@ -14,3 +14,5 @@ onlyUpper xs = [c | c <- xs, c `elem` ['A'..'Z']]
 
 sumPairs :: (Num a) => [(a,a)] -> [a]
 sumPairs list = [(x+y) | (x,y) <- list]
+
+set = [x | x <- zip (take 10 [0,2..]) (take 10 [1,3..])]
