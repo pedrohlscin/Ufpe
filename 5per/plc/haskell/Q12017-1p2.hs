@@ -62,21 +62,26 @@ consumidor bulbos soquetes embalagens lampadas fim = do
                                                     putMVar fim (f - 1)
                                                     consumidor bulbos soquetes embalagens lampadas fim
 
-contador :: MVar Int -> MVar Int -> IO()
-contador i_count fim = do
-  c <- takeMVar i_count
-  putMVar i_count (c + 1)
+-- contador :: MVar Int -> MVar Int -> IO()
+-- contador i_count fim = do
+--   c <- takeMVar i_count
+--   putMVar i_count (c + 1)
+--   f <- takeMVar fim
+--   putMVar fim (f-1)
+--   contador i_count fim
+
+contador :: MVar Int -> IO()
+contador fim = do
   f <- takeMVar fim
   putMVar fim (f-1)
-  contador i_count fim
+  contador fim
 
 main = do 
   fim <- newTVar 100
-  count <- newEmptyTVar
-  forkIO(contador count fim)
+  forkIO(contador fim)
   waitThreads fim
-  c <- readTVar count
-  putStrLn "Hello"
+  c <- takeMVar fim
+  putStrLn("Hello : " ++ show c)
         -- bulbos <- MVar
         -- soquetes <- atomically (newTVar 0)
         -- embalagens <- atomically (newTVar 0)
