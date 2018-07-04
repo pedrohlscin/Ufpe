@@ -14,10 +14,12 @@ public class Questao1PLC {
                 this.saldo -= valor;
                 return true;
             }
+            return false;
         }
 
         public synchronized boolean deposita(float valor){
             this.saldo += valor;
+            return true;
         }
     }
 
@@ -33,7 +35,7 @@ public class Questao1PLC {
 
     public static void main(String[] args){
         Pessoa[] pessoas = new Pessoa[6];
-        Conta conta = new Conta();
+        Conta conta = new Conta(5);
         for(int i = 0; i <= 5; i++){
             pessoas[i] = new Pessoa("Nome" + i , conta);
         }
