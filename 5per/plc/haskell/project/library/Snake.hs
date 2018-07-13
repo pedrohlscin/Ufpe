@@ -3,8 +3,29 @@ module Snake where
 import qualified Graphics.Gloss.Interface.Pure.Game as G
 import qualified System.Random as R
 
+waitThreads :: MVar Bool -> IO ()
+waitThreads fim = do
+    f <- takeMVar fim
+    if f == False
+    then
+        let oldSnake = snake world
+            newSnake@((x, y) : _) = init oldSnake
+            (x', y') = case direction world of
+                North -> (x, y + 1)
+                East -> (x + 1, y)
+                South -> (x, y - 1)
+                West -> (x - 1, y)
+        in  if inBounds world (x', y') && not (isSnake world (x', y'))
+                then putMVar fim True
+                else putMVar fim False
+    else
+        return IO()
+
+
 main :: IO ()
 main = do
+    fim <- newMVar False
+    forkIO(waitThreads fim)
     seed <- R.randomIO
     let world = initialWorld seed
 
@@ -26,7 +47,7 @@ backgroundColor :: G.Color
 backgroundColor = G.white
 
 stepRate :: Int
-stepRate = 10
+stepRate = 5
 
 initialWorld :: Int -> World
 initialWorld seed = moveFood NewWorld
@@ -34,7 +55,7 @@ initialWorld seed = moveFood NewWorld
     , direction = North
     , scale = 30
     , snake = [(0, 2), (0, 1), (0, 0), (0, -1), (0, -2)]
-    , snake_auto = [(-5,-5), (-5,-4)]
+    -- , snake_auto = [(-5,-5), (-5,-4)]
     , isOver = False
     , gen = R.mkStdGen seed
     , food = (0, 0)
@@ -45,7 +66,7 @@ drawWorld world = G.pictures
     [ drawBounds world
     , drawFood world
     , drawSnake world
-    , drawSnakeAuto world
+    -- , drawSnakeAuto world
     , drawGameOver world
     ]
 
@@ -58,32 +79,38 @@ handleEvent event world = case event of
     _ -> world
 
 handleStep :: Float -> World -> World
-handleStep _time world =
-    if isOver world
-    then world
-    else
+handleStep _time world = do
+    f <- TakeMVar fim
+    -- if isOver world
+    if f
+    then do
+        putMVar fim f
+         world
+
+    else do
+        putMVar fim f
         let oldSnake = snake world
             newSnake@((x, y) : _) = init oldSnake
             (x', y') = case direction world of
-                North -> (x, y + 1)
-                East -> (x + 1, y)
-                South -> (x, y - 1)
-                West -> (x - 1, y)
-            oldSnake_auto = snake_auto world
-            newSnake_auto@((x_auto, y_auto) : _) = init oldSnake_auto
-            (x_auto', y_auto') = case direction world of
-                North -> (x_auto, y_auto + 1)
-                East -> (x_auto + 1, y_auto)
-                South -> (x_auto, y_auto - 1)
-                West -> (x_auto - 1, y_auto)
-            
-        in  if inBounds world (x', y') && not (isSnake world (x', y'))
-            then if isFood world (x', y')
-                then
-                    let world' = moveFood world
-                    in  world' { snake = (x', y') : oldSnake, snake_auto = (x_auto', y_auto') : oldSnake_auto }
-                else world { snake = (x', y') : newSnake, snake_auto = (x_auto', y_auto') : newSnake_auto }
-            else world { isOver = True }
+                       North -> (x, y + 1)
+                       East -> (x + 1, y)
+                       South -> (x, y - 1)
+                       West -> (x - 1, y)
+         in  if inBounds world (x', y') && not (isSnake world (x', y'))
+                            then if isFood world (x', y')
+                                then let world' = moveFood world                    
+                                         stepRate = do
+
+                                         if ((snake world) `mod` 5 == 0)
+                                            then 
+                                                stepRate = (stepRate world) * 2
+                                                
+                                            else 
+                                                stepRate = (stepRate world)
+                                                
+                                         in  world' { snake = (x', y') : oldSnake }
+                            else world { snake = (x', y') : newSnake}
+        else world { isOver = True }
 --
 
 drawBounds :: World -> G.Picture
@@ -102,13 +129,13 @@ drawSnake world = case snake world of
         )
     _ -> G.blank
 
-drawSnakeAuto :: World -> G.Picture
-drawSnakeAuto world = case snake_auto world of
-    (p : ps) -> G.pictures
-        ( G.color G.red (drawBox p world)
-        : map (\ x -> drawBox x world) ps
-        )
-    _ -> G.blank
+-- drawSnakeAuto :: World -> G.Picture
+-- drawSnakeAuto world = case snake_auto world of
+--     (p : ps) -> G.pictures
+--         ( G.color G.red (drawBox p world)
+--         : map (\ x -> drawBox x world) ps
+--         )
+--     _ -> G.blank
 
 drawBox :: (Int, Int) -> World -> G.Picture
 drawBox (x, y) world =
@@ -151,7 +178,7 @@ data World = NewWorld
     , direction :: Direction
     , scale :: Int
     , snake :: [(Int, Int)]
-    , snake_auto :: [(Int, Int)]
+    -- , snake_auto :: [(Int, Int)]
     , isOver :: Bool
     , gen :: R.StdGen
     , food :: (Int, Int)
@@ -181,7 +208,7 @@ moveFood world =
         (y, g2) = R.randomR (-a, a) g1
     in  if isSnake world (x, y)
         then moveFood world { gen = g2 }
-        else world { gen = g2 , food = (x, y) }
+        else world { gen = g2 , food = (x, y) }        
 
 data Direction
     = North
