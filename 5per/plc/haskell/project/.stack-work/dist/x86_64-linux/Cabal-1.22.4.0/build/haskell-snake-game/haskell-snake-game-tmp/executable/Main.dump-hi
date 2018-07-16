@@ -1,0 +1,75 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-12 21:30:44.633109 UTC
+
+interface main@main:Main 7102
+  interface hash: 5d91cfd122426a2ddd73daba93d5358a
+  ABI hash: 7e03ee7beaaf8d09e0f1f41450589df6
+  export-list hash: 4183f38dd9efe65c4c7ff627466c5498
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2491b964d07e4e20ba7bbc87a1fd2882
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Snake.main
+module dependencies:
+package dependencies: GLURaw-1.5.0.1@GLURa_2YMkZ9eTkpWFFC1g3AwjgN
+                      GLUT-2.7.0.2@GLUT_64Zh0yYlH5DC8IHllFiNMY
+                      ObjectName-1.1.0.0@Objec_Ej1Cgp8vUjN6m1ytQ9jTTT
+                      OpenGL-2.12.0.1@OpenG_ERAYtxRi2WwAPX3jFWzSW0
+                      OpenGLRaw-2.5.3.0@OpenG_Hej4l3IN59XDrJRoob2luc
+                      StateVar-1.1.0.1@State_6K4a3UqSdqh6lGAm1wlr9s
+                      array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ base-4.8.1.0
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bmp-1.2.5.2@bmp_3glgeKBRcmxLNjYfdSEbIj
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o ghc-prim-0.4.0.0
+                      gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk
+                      gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE
+                      haskell-snake-game-0.1.0@haske_CvD1J8tukoCH9CN6zLuWnH
+                      integer-gmp-1.0.0.0 random-1.1@rando_1z8Ujelqc6aKgvPnbRUKkP
+                      stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk:Graphics.Gloss.Internals.Data.Picture
+         stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Monad.STM
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  haskell-snake-game-0.1.0@haske_CvD1J8tukoCH9CN6zLuWnH:Snake 8fa998f690fae862e57daa9cf6620b69
+1bfcd81f453e5acda6272d4b3de2be7a
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Snake.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
