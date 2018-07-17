@@ -1,0 +1,2537 @@
+
+==================== FINAL INTERFACE ====================
+2018-07-12 21:30:42.696603 UTC
+
+interface haske_CvD1J8tukoCH9CN6zLuWnH:Snake 7102
+  interface hash: 55020eb5c4a2b80d68b071bd5be9672f
+  ABI hash: 8fa998f690fae862e57daa9cf6620b69
+  export-list hash: 3778486a6195d4cac05550540bee2be2
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e5db7146248168e7d725a3bfe67115ae
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Snake.backgroundColor
+  Snake.displayMode
+  Snake.drawBounds
+  Snake.drawBox
+  Snake.drawFood
+  Snake.drawGameOver
+  Snake.drawSnake
+  Snake.drawWorld
+  Snake.handleEvent
+  Snake.handleKey
+  Snake.handleResize
+  Snake.handleStep
+  Snake.inBounds
+  Snake.initialWorld
+  Snake.isFood
+  Snake.isSnake
+  Snake.main
+  Snake.moveFood
+  Snake.size
+  Snake.stepRate
+  Snake.Direction{Snake.East Snake.North Snake.South Snake.West}
+  Snake.World{Snake.NewWorld Snake.direction Snake.food Snake.gen Snake.isOver Snake.resolution Snake.scale Snake.snake}
+module dependencies:
+package dependencies: GLURaw-1.5.0.1@GLURa_2YMkZ9eTkpWFFC1g3AwjgN
+                      GLUT-2.7.0.2@GLUT_64Zh0yYlH5DC8IHllFiNMY
+                      ObjectName-1.1.0.0@Objec_Ej1Cgp8vUjN6m1ytQ9jTTT
+                      OpenGL-2.12.0.1@OpenG_ERAYtxRi2WwAPX3jFWzSW0
+                      OpenGLRaw-2.5.3.0@OpenG_Hej4l3IN59XDrJRoob2luc
+                      StateVar-1.1.0.1@State_6K4a3UqSdqh6lGAm1wlr9s
+                      array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ base-4.8.1.0
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bmp-1.2.5.2@bmp_3glgeKBRcmxLNjYfdSEbIj
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o ghc-prim-0.4.0.0
+                      gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk
+                      gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE integer-gmp-1.0.0.0
+                      random-1.1@rando_1z8Ujelqc6aKgvPnbRUKkP
+                      stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk:Graphics.Gloss.Internals.Data.Picture
+         stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Monad.STM
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.Enum d0db4d619cd8916cc7a23444816222af
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.1.0:GHC.Read cfaa50b414b9b02ef6fe4fe5600d9b95
+import  -/  base-4.8.1.0:GHC.Real 4c3b525ecbd4d62bb287aec36d4c2f0d
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:Text.ParserCombinators.ReadPrec 1844ee1249db84f72bd233d7a9bbd968
+import  -/  base-4.8.1.0:Text.Read.Lex 1ec4c08d49d1d5264b910cc76b6c6fde
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk:Graphics.Gloss.Internals.Data.Color 56075d3495fc4204d9d9134be37eaac0
+import  -/  gloss-rendering-1.9.3.1@gloss_ASk4gZ0T6GaCogf7xpG1nk:Graphics.Gloss.Internals.Data.Picture c9fc78280b92072158c9e8031b864aab
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Data.Color c98ecba39c5b629f2fb67016999d4927
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Data.Display 54653b35d2a350bf012dec6375c01311
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Data.Picture f9934c90ebb106b96e9842d9937e6870
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Interface.Pure.Game 1d81b8de0cb1d780d321a8ce0e32d35d
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Internals.Interface.Backend.Types a8887342d61053aa32245fdbdf81a7c9
+import  -/  gloss-1.9.4.1@gloss_Bwbty0xKd5G1u4f630Q1FE:Graphics.Gloss.Internals.Interface.Event 7a5050aff2bf8296bae8c2eb693cd297
+import  -/  random-1.1@rando_1z8Ujelqc6aKgvPnbRUKkP:System.Random 043afd3a72ee464fc1e36264f990a1de
+4b92b60d7341431d4cb758a5ca7c7209
+  $fBoundedDirection :: GHC.Enum.Bounded Snake.Direction
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:. @ Snake.Direction Snake.North Snake.West -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection :: GHC.Enum.Enum Snake.Direction
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.Direction
+                  Snake.$fEnumDirection_$csucc
+                  Snake.$fEnumDirection_$cpred
+                  Snake.$fEnumDirection_$ctoEnum
+                  Snake.$fEnumDirection_$cfromEnum
+                  Snake.$fEnumDirection_$cenumFrom
+                  Snake.$fEnumDirection_$cenumFromThen
+                  Snake.$fEnumDirection_$cenumFromTo
+                  Snake.$fEnumDirection_$cenumFromThenTo -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection1 :: [Snake.Direction]
+  {- Unfolding: (Snake.$fEnumDirection_go4 3) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection2 :: [Snake.Direction]
+  {- Unfolding: (Snake.$fEnumDirection_go5 2) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection3 :: [Snake.Direction]
+  {- Unfolding: (Snake.$fEnumDirection_go6 1) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection4 :: [Snake.Direction]
+  {- Unfolding: (Snake.$fEnumDirection_go7 0) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection5 :: GHC.Prim.Int# -> Snake.Direction
+  {- Arity: 1, Strictness: <L,U>b -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection6 :: Snake.Direction
+  {- Strictness: b -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection7 :: Snake.Direction
+  {- Strictness: b -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cenumFrom :: Snake.Direction -> [Snake.Direction]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> Snake.$fEnumDirection4
+                   Snake.East -> Snake.$fEnumDirection3
+                   Snake.South -> Snake.$fEnumDirection2
+                   Snake.West -> Snake.$fEnumDirection1 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cenumFromThen ::
+    Snake.Direction -> Snake.Direction -> [Snake.Direction]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Snake.Direction]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ a# :: GHC.Prim.Int#[OneShot] ->
+                     let {
+                       $j1 :: GHC.Prim.Int# -> [Snake.Direction]
+                         {- Arity: 1, Strictness: <L,U> -}
+                       = \ b# :: GHC.Prim.Int#[OneShot] ->
+                         let {
+                           $j2 :: GHC.Prim.Int# -> [Snake.Direction]
+                             {- Arity: 1, Strictness: <L,U> -}
+                           = \ y :: GHC.Prim.Int#[OneShot] ->
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.>=# b# a#) of wild {
+                               GHC.Types.False
+                               -> GHC.Enum.efdtIntDnFB
+                                    @ [Snake.Direction]
+                                    Snake.$fEnumDirection_c
+                                    (GHC.Types.[] @ Snake.Direction)
+                                    a#
+                                    b#
+                                    y
+                               GHC.Types.True
+                               -> GHC.Enum.efdtIntUpFB
+                                    @ [Snake.Direction]
+                                    Snake.$fEnumDirection_c
+                                    (GHC.Types.[] @ Snake.Direction)
+                                    a#
+                                    b#
+                                    y }
+                         } in
+                         case GHC.Prim.tagToEnum#
+                                @ GHC.Types.Bool
+                                (GHC.Prim.># a# b#) of wild {
+                           GHC.Types.False -> $j2 3 GHC.Types.True -> $j2 0 }
+                     } in
+                     case b of wild {
+                       Snake.North -> $j1 0
+                       Snake.East -> $j1 1
+                       Snake.South -> $j1 2
+                       Snake.West -> $j1 3 }
+                 } in
+                 case a2 of wild {
+                   Snake.North -> $j 0
+                   Snake.East -> $j 1
+                   Snake.South -> $j 2
+                   Snake.West -> $j 3 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cenumFromThenTo ::
+    Snake.Direction
+    -> Snake.Direction -> Snake.Direction -> [Snake.Direction]
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cenumFromTo ::
+    Snake.Direction -> Snake.Direction -> [Snake.Direction]
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Snake.Direction y :: Snake.Direction ->
+                 let {
+                   $j :: GHC.Prim.Int# -> [Snake.Direction]
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ x1 :: GHC.Prim.Int#[OneShot] ->
+                     case y of wild {
+                       Snake.North
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 0) of wild1 {
+                            GHC.Types.False -> Snake.$fEnumDirection_go3 x1
+                            GHC.Types.True -> GHC.Types.[] @ Snake.Direction }
+                       Snake.East
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 1) of wild1 {
+                            GHC.Types.False -> Snake.$fEnumDirection_go2 x1
+                            GHC.Types.True -> GHC.Types.[] @ Snake.Direction }
+                       Snake.South
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 2) of wild1 {
+                            GHC.Types.False -> Snake.$fEnumDirection_go1 x1
+                            GHC.Types.True -> GHC.Types.[] @ Snake.Direction }
+                       Snake.West
+                       -> case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># x1 3) of wild1 {
+                            GHC.Types.False -> Snake.$fEnumDirection_go x1
+                            GHC.Types.True -> GHC.Types.[] @ Snake.Direction } }
+                 } in
+                 case x of wild {
+                   Snake.North -> $j 0
+                   Snake.East -> $j 1
+                   Snake.South -> $j 2
+                   Snake.West -> $j 3 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cfromEnum :: Snake.Direction -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ a2 :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> GHC.Types.I# 0
+                   Snake.East -> GHC.Types.I# 1
+                   Snake.South -> GHC.Types.I# 2
+                   Snake.West -> GHC.Types.I# 3 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$cpred :: Snake.Direction -> Snake.Direction
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ a2 :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> Snake.$fEnumDirection6
+                   Snake.East -> Snake.North
+                   Snake.South -> Snake.East
+                   Snake.West -> Snake.South }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$csucc :: Snake.Direction -> Snake.Direction
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ a2 :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> Snake.East
+                   Snake.East -> Snake.South
+                   Snake.South -> Snake.West
+                   Snake.West -> Snake.$fEnumDirection7 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_$ctoEnum :: GHC.Types.Int -> Snake.Direction
+  {- Arity: 1, Strictness: <S,1*U(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: GHC.Types.Int ->
+                 case w of ww { GHC.Types.I# ww1 -> Snake.$w$ctoEnum ww1 }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_c ::
+    GHC.Types.Int -> [Snake.Direction] -> [Snake.Direction]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: GHC.Types.Int ys :: [Snake.Direction] ->
+                 GHC.Types.:
+                   @ Snake.Direction
+                   (case x of wild { GHC.Types.I# a2 ->
+                    GHC.Prim.tagToEnum# @ Snake.Direction a2 })
+                   ys) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go1 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go2 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go3 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go4 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go5 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go6 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEnumDirection_go7 :: GHC.Prim.Int# -> [Snake.Direction]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEqDirection :: GHC.Classes.Eq Snake.Direction
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.Direction
+                  Snake.$fEqDirection_$c==
+                  Snake.$fEqDirection_$c/= -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEqDirection_$c/= ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.North -> GHC.Types.False }
+                   Snake.East
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.East -> GHC.Types.False }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.South -> GHC.Types.False }
+                   Snake.West
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.West -> GHC.Types.False } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fEqDirection_$c== ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ ds :: Snake.Direction ds1 :: Snake.Direction ->
+                 case ds of wild {
+                   Snake.North
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.North -> GHC.Types.True }
+                   Snake.East
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.East -> GHC.Types.True }
+                   Snake.South
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.South -> GHC.Types.True }
+                   Snake.West
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.West -> GHC.Types.True } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection :: GHC.Classes.Ord Snake.Direction
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.Direction
+                  Snake.$fEqDirection
+                  Snake.$fOrdDirection_$ccompare
+                  Snake.$fOrdDirection_$c<
+                  Snake.$fOrdDirection_$c<=
+                  Snake.$fOrdDirection_$c>
+                  Snake.$fOrdDirection_$c>=
+                  Snake.$fOrdDirection_$cmax
+                  Snake.$fOrdDirection_$cmin -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$c< ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.False
+                        Snake.East -> GHC.Types.True
+                        Snake.South -> GHC.Types.True
+                        Snake.West -> GHC.Types.True }
+                   Snake.East
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Snake.South -> GHC.Types.True
+                        Snake.West -> GHC.Types.True }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.West -> GHC.Types.True }
+                   Snake.West -> case b of wild1 { DEFAULT -> GHC.Types.False } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$c<= ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> case b of wild1 { DEFAULT -> GHC.Types.True }
+                   Snake.East
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.False
+                        Snake.East -> GHC.Types.True
+                        Snake.South -> GHC.Types.True
+                        Snake.West -> GHC.Types.True }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Snake.South -> GHC.Types.True
+                        Snake.West -> GHC.Types.True }
+                   Snake.West
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.False Snake.West -> GHC.Types.True } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$c> ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North -> case b of wild1 { DEFAULT -> GHC.Types.False }
+                   Snake.East
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.True
+                        Snake.East -> GHC.Types.False
+                        Snake.South -> GHC.Types.False
+                        Snake.West -> GHC.Types.False }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Snake.South -> GHC.Types.False
+                        Snake.West -> GHC.Types.False }
+                   Snake.West
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.West -> GHC.Types.False } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$c>= ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.True
+                        Snake.East -> GHC.Types.False
+                        Snake.South -> GHC.Types.False
+                        Snake.West -> GHC.Types.False }
+                   Snake.East
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Snake.South -> GHC.Types.False
+                        Snake.West -> GHC.Types.False }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Snake.West -> GHC.Types.False }
+                   Snake.West -> case b of wild1 { DEFAULT -> GHC.Types.True } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$ccompare ::
+    Snake.Direction -> Snake.Direction -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ a2 :: Snake.Direction b :: Snake.Direction ->
+                 case a2 of wild {
+                   Snake.North
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.EQ
+                        Snake.East -> GHC.Types.LT
+                        Snake.South -> GHC.Types.LT
+                        Snake.West -> GHC.Types.LT }
+                   Snake.East
+                   -> case b of wild1 {
+                        Snake.North -> GHC.Types.GT
+                        Snake.East -> GHC.Types.EQ
+                        Snake.South -> GHC.Types.LT
+                        Snake.West -> GHC.Types.LT }
+                   Snake.South
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT
+                        Snake.South -> GHC.Types.EQ
+                        Snake.West -> GHC.Types.LT }
+                   Snake.West
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.GT Snake.West -> GHC.Types.EQ } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$cmax ::
+    Snake.Direction -> Snake.Direction -> Snake.Direction
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Snake.Direction y :: Snake.Direction ->
+                 case x of wild {
+                   Snake.North -> y
+                   Snake.East
+                   -> case y of wild1 {
+                        DEFAULT -> Snake.East
+                        Snake.South -> Snake.South
+                        Snake.West -> Snake.West }
+                   Snake.South
+                   -> case y of wild1 {
+                        DEFAULT -> Snake.South Snake.West -> Snake.West }
+                   Snake.West -> case y of wild1 { DEFAULT -> Snake.West } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fOrdDirection_$cmin ::
+    Snake.Direction -> Snake.Direction -> Snake.Direction
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ x :: Snake.Direction y :: Snake.Direction ->
+                 case x of wild {
+                   Snake.North -> case y of wild1 { DEFAULT -> Snake.North }
+                   Snake.East
+                   -> case y of wild1 {
+                        Snake.North -> Snake.North
+                        Snake.East -> Snake.East
+                        Snake.South -> Snake.East
+                        Snake.West -> Snake.East }
+                   Snake.South
+                   -> case y of wild1 {
+                        DEFAULT -> wild1
+                        Snake.South -> Snake.South
+                        Snake.West -> Snake.South }
+                   Snake.West -> y }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection :: GHC.Read.Read Snake.Direction
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.Direction
+                  Snake.$fReadDirection_$s$dmreadsPrec
+                  Snake.$fReadDirection_$sreadListDefault
+                  Snake.$fReadDirection_$creadPrec
+                  Snake.$fReadDirection_$creadListPrec -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Snake.Direction] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: [Snake.Direction] -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.$wa
+                   @ Snake.Direction
+                   Snake.$fReadDirection2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <Snake.Direction>_R))
+                   @ b
+                   eta1) -}
+fa8fb9b7dfc715806eba6ce7c116c10e
+  $fReadDirection10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "West"#) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection11 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+  {- Strictness: m,
+     Unfolding: ((Snake.$fReadDirection13,
+                  Snake.$fReadDirection12
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                      <Snake.Direction>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                 <Snake.Direction>_R))))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection12 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.Direction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ ds :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta :: Snake.Direction -> Text.ParserCombinators.ReadP.P b ->
+                 eta Snake.South) -}
+ba77c3eaa220b8fa1f0a8918142ff0d1
+  $fReadDirection13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "South"#) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection14 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+  {- Strictness: m,
+     Unfolding: ((Snake.$fReadDirection16,
+                  Snake.$fReadDirection15
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                      <Snake.Direction>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                 <Snake.Direction>_R))))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection15 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.Direction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ ds :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta :: Snake.Direction -> Text.ParserCombinators.ReadP.P b ->
+                 eta Snake.East) -}
+4542563edb414a631ae7453257980291
+  $fReadDirection16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "East"#) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection17 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+  {- Strictness: m,
+     Unfolding: ((Snake.$fReadDirection19,
+                  Snake.$fReadDirection18
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                      <Snake.Direction>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                 <Snake.Direction>_R))))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection18 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.Direction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ ds :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta :: Snake.Direction -> Text.ParserCombinators.ReadP.P b ->
+                 eta Snake.North) -}
+603cf720e60bb0999b051f803ba5fff6
+  $fReadDirection19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "North"#) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP Snake.Direction
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ Snake.Direction
+                   Snake.$fReadDirection3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                       <Snake.Direction>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                  <Snake.Direction>_R)))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.Direction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: Snake.Direction -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.choose2
+                   @ Snake.Direction
+                   Snake.$fReadDirection4
+                   eta
+                   @ b
+                   eta1) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection4 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+                   Snake.$fReadDirection17
+                   Snake.$fReadDirection5) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection5 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+                   Snake.$fReadDirection14
+                   Snake.$fReadDirection6) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection6 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+                   Snake.$fReadDirection11
+                   Snake.$fReadDirection7) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection7 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+                   Snake.$fReadDirection8
+                   (GHC.Types.[]
+                      @ (GHC.Base.String,
+                         Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection8 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction)
+  {- Strictness: m,
+     Unfolding: ((Snake.$fReadDirection10,
+                  Snake.$fReadDirection9
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                      <Snake.Direction>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                 <Snake.Direction>_R))))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection9 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.Direction -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ ds :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta :: Snake.Direction -> Text.ParserCombinators.ReadP.P b ->
+                 eta Snake.West) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [Snake.Direction]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Snake.$fReadDirection1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                    <[Snake.Direction]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                               <[Snake.Direction]>_R))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec Snake.Direction
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Snake.$fReadDirection2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                          <Snake.Direction>_R)) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection_$s$dmreadsPrec ::
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Snake.Direction
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadPrec.readPrec_to_S
+                   @ Snake.Direction
+                   Snake.$fReadDirection_$creadPrec
+                   eta) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fReadDirection_$sreadListDefault ::
+    Text.ParserCombinators.ReadP.ReadS [Snake.Direction]
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, False)
+                (Text.ParserCombinators.ReadP.run
+                   @ [Snake.Direction]
+                   ((Snake.$fReadDirection_$creadListPrec
+                       `cast`
+                     (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                          <[Snake.Direction]>_R)
+                       GHC.Read.$fRead(,)7)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <[Snake.Direction]>_R)
+                      @ [Snake.Direction]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ [Snake.Direction]))) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld :: GHC.Read.Read Snake.World
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.World
+                  Snake.$fReadWorld_$s$dmreadsPrec
+                  Snake.$fReadWorld_$sreadListDefault
+                  Snake.$fReadWorld_$creadPrec
+                  Snake.$fReadWorld_$creadListPrec -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Snake.World] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: [Snake.World] -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.$wa
+                   @ Snake.World
+                   Snake.$fReadWorld2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <Snake.World>_R))
+                   @ b
+                   eta1) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP Snake.World
+  {- Arity: 1,
+     Unfolding: (GHC.Read.$fReadDouble10
+                   @ Snake.World
+                   Snake.$fReadWorld3
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                       <Snake.World>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                  <Snake.World>_R)))) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld3 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (Snake.World -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <S,1*U(U)><L,C(U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   w1 :: Snake.World -> Text.ParserCombinators.ReadP.P b ->
+                 case w of ww { GHC.Types.I# ww1 -> Snake.$wa ww1 @ b w1 }) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [Snake.World]
+  {- Arity: 2, Strictness: <L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Snake.$fReadWorld1
+                  `cast`
+                (Trans
+                     (<Text.ParserCombinators.ReadPrec.Prec>_R
+                      ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                    <[Snake.World]>_R))
+                     (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                               <[Snake.World]>_R))) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld_$creadPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec Snake.World
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Snake.$fReadWorld2
+                  `cast`
+                (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                          <Snake.World>_R)) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld_$s$dmreadsPrec ::
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS Snake.World
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadPrec.readPrec_to_S
+                   @ Snake.World
+                   Snake.$fReadWorld_$creadPrec
+                   eta) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fReadWorld_$sreadListDefault ::
+    Text.ParserCombinators.ReadP.ReadS [Snake.World]
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, False)
+                (Text.ParserCombinators.ReadP.run
+                   @ [Snake.World]
+                   ((Snake.$fReadWorld_$creadListPrec
+                       `cast`
+                     (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                          <[Snake.World]>_R)
+                       GHC.Read.$fRead(,)7)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <[Snake.World]>_R)
+                      @ [Snake.World]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ [Snake.World]))) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fShowDirection :: GHC.Show.Show Snake.Direction
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.Direction
+                  Snake.$fShowDirection_$cshowsPrec
+                  Snake.$fShowDirection_$cshow
+                  Snake.$fShowDirection_$cshowList -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fShowDirection_$cshow :: Snake.Direction -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Snake.Direction ->
+                 Snake.$fShowDirection_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fShowDirection_$cshowList :: [Snake.Direction] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Snake.Direction
+                   Snake.$w$cshowsPrec) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $fShowDirection_$cshowsPrec ::
+    GHC.Types.Int -> Snake.Direction -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int
+                   w1 :: Snake.Direction
+                   w2 :: GHC.Base.String ->
+                 Snake.$w$cshowsPrec w1 w2) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fShowWorld :: GHC.Show.Show Snake.World
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Snake.World
+                  Snake.$fShowWorld_$cshowsPrec
+                  Snake.$fShowWorld_$cshow
+                  Snake.$fShowWorld_$cshowList -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fShowWorld1 :: Snake.World -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: Snake.World w1 :: GHC.Base.String ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Snake.$w$cshowsPrec1 0 ww1 ww2 ww3 ww4 ww5 ww6 ww7 w1 }) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fShowWorld_$cshow :: Snake.World -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U(1*U(U),U(U)),1*U,1*U(U),1*U,1*U,1*U(U,U),1*U(1*U(U),U(U)))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Snake.World ->
+                 Snake.$fShowWorld_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fShowWorld_$cshowList :: [Snake.World] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Snake.World
+                   Snake.$fShowWorld1) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $fShowWorld_$cshowsPrec ::
+    GHC.Types.Int -> Snake.World -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S,1*U(U)><S,1*U(1*U(1*U(U),U(U)),1*U,1*U(U),1*U,1*U,1*U(U,U),1*U(1*U(U),U(U)))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int w1 :: Snake.World w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Snake.NewWorld ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 Snake.$w$cshowsPrec1 ww1 ww3 ww4 ww5 ww6 ww7 ww8 ww9 w2 } }) -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $w$cshowsPrec ::
+    Snake.Direction -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Snake.Direction w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Snake.North
+                   -> GHC.Base.++ @ GHC.Types.Char Snake.$fReadDirection19 w1
+                   Snake.East
+                   -> GHC.Base.++ @ GHC.Types.Char Snake.$fReadDirection16 w1
+                   Snake.South
+                   -> GHC.Base.++ @ GHC.Types.Char Snake.$fReadDirection13 w1
+                   Snake.West
+                   -> GHC.Base.++ @ GHC.Types.Char Snake.$fReadDirection10 w1 }) -}
+a933c150f281e7ff4dcb324ca0c049e2
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> Snake.Direction
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Bool
+    -> System.Random.StdGen
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 9,
+     Strictness: <L,U><L,1*U(1*U(U),U(U))><L,1*U><L,1*U(U)><L,1*U><L,1*U><L,1*U(U,U)><L,1*U(1*U(U),U(U))><L,U>,
+     Inline: [0] -}
+4b92b60d7341431d4cb758a5ca7c7209
+  $w$ctoEnum :: GHC.Prim.Int# -> Snake.Direction
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int# ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 0) of wild {
+                   GHC.Types.False -> Snake.$fEnumDirection5 ww
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww 3) of wild1 {
+                        GHC.Types.False -> Snake.$fEnumDirection5 ww
+                        GHC.Types.True -> GHC.Prim.tagToEnum# @ Snake.Direction ww } }) -}
+8284520735d5e6a09b47eaa1be6c2af9
+  $wa ::
+    GHC.Prim.Int#
+    -> forall b.
+       (Snake.World -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, Strictness: <L,U><L,C(U)>, Inline: [0] -}
+4499caf12a5e99c9353c903de40bcad1
+  $wdrawBounds ::
+    Snake.World -> (# Graphics.Gloss.Internals.Data.Picture.Path #)
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(1*U(U),1*U(U)),A,A,A,A,A,A)>, Inline: [0],
+     Unfolding: (\ w :: Snake.World ->
+                 let {
+                   x :: GHC.Types.Float
+                   = case w of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                     case ds of wild1 { (,) width height ->
+                     case width of wild2 { GHC.Types.I# x1 ->
+                     case height of wild3 { GHC.Types.I# y1 ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# x1 y1) of wild4 {
+                       GHC.Types.False -> GHC.Types.F# (GHC.Prim.int2Float# y1)
+                       GHC.Types.True -> GHC.Types.F# (GHC.Prim.int2Float# x1) } } } } }
+                 } in
+                 case Graphics.Gloss.Data.Picture.$wrectanglePath
+                        x
+                        x of ww { (#,#) ww1 ww2 ->
+                 (# GHC.Base.++
+                      @ (GHC.Types.Float, GHC.Types.Float)
+                      (GHC.Types.: @ Graphics.Gloss.Internals.Data.Picture.Point ww1 ww2)
+                      (GHC.Types.:
+                         @ (GHC.Types.Float, GHC.Types.Float)
+                         ww1
+                         (GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float))) #) }) -}
+17615d6732313bb619c4c34a0dd1ea64
+  $wdrawBox ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Snake.World
+    -> (# GHC.Types.Float,
+          GHC.Types.Float,
+          Graphics.Gloss.Internals.Data.Picture.Picture #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(U)><L,1*U(U)><L,1*U(1*U(1*U(U),1*U(U)),A,1*U(U),A,A,A,A)>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Types.Int
+                   ww1 :: GHC.Types.Int
+                   w :: Snake.World ->
+                 let {
+                   s :: GHC.Types.Float
+                   = case w of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                     case ds of wild1 { (,) width height ->
+                     case width of wild2 { GHC.Types.I# x1 ->
+                     case height of wild3 { GHC.Types.I# y1 ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# x1 y1) of wild4 {
+                       GHC.Types.False
+                       -> case ds2 of wild5 { GHC.Types.I# i ->
+                          case GHC.Prim.divideFloat#
+                                 (GHC.Prim.int2Float# y1)
+                                 (GHC.Prim.int2Float# i) of wild6 { DEFAULT ->
+                          GHC.Types.F# wild6 } }
+                       GHC.Types.True
+                       -> case ds2 of wild5 { GHC.Types.I# i ->
+                          case GHC.Prim.divideFloat#
+                                 (GHC.Prim.int2Float# x1)
+                                 (GHC.Prim.int2Float# i) of wild6 { DEFAULT ->
+                          GHC.Types.F# wild6 } } } } } } }
+                 } in
+                 (# case s of wild { GHC.Types.F# x ->
+                    case ww of wild1 { GHC.Types.I# i ->
+                    GHC.Types.F# (GHC.Prim.timesFloat# x (GHC.Prim.int2Float# i)) } },
+                    case s of wild { GHC.Types.F# x ->
+                    case ww1 of wild1 { GHC.Types.I# i ->
+                    GHC.Types.F# (GHC.Prim.timesFloat# x (GHC.Prim.int2Float# i)) } },
+                    Graphics.Gloss.Data.Picture.rectangleSolid s s #)) -}
+5af46c2737ed94b32e230f6d6ec34388
+  $wdrawGameOver ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Bool -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 2, Strictness: <L,1*U><S,1*U>, Inline: [0],
+     Unfolding: (\ ww :: [(GHC.Types.Int, GHC.Types.Int)]
+                   ww1 :: GHC.Types.Bool ->
+                 case ww1 of wild {
+                   GHC.Types.False -> Graphics.Gloss.Internals.Data.Picture.Blank
+                   GHC.Types.True
+                   -> Graphics.Gloss.Internals.Data.Picture.Pictures
+                        (GHC.Types.:
+                           @ Graphics.Gloss.Internals.Data.Picture.Picture
+                           Snake.drawGameOver4
+                           (GHC.Types.:
+                              @ Graphics.Gloss.Internals.Data.Picture.Picture
+                              (Graphics.Gloss.Internals.Data.Picture.Color
+                                 Graphics.Gloss.Data.Color.blue
+                                 (Graphics.Gloss.Internals.Data.Picture.Translate
+                                    Snake.drawGameOver3
+                                    Snake.drawGameOver2
+                                    (Graphics.Gloss.Internals.Data.Picture.Scale
+                                       Snake.drawGameOver1
+                                       Snake.drawGameOver1
+                                       (Graphics.Gloss.Internals.Data.Picture.Text
+                                          (GHC.CString.unpackAppendCString#
+                                             "score: "#
+                                             (case GHC.List.$wlenAcc
+                                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                                     ww
+                                                     0 of ww2 { DEFAULT ->
+                                              case GHC.Show.$wshowSignedInt
+                                                     0
+                                                     ww2
+                                                     (GHC.Types.[]
+                                                        @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))))))
+                              (GHC.Types.[]
+                                 @ Graphics.Gloss.Internals.Data.Picture.Picture))) }) -}
+ec7ad8e8a5813512e9cc12075ba4e32f
+  $wdrawSnake ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 3, Strictness: <L,U(U(U),U(U))><L,U(U)><S,1*U>,
+     Inline: [0],
+     Unfolding: (\ ww :: (GHC.Types.Int, GHC.Types.Int)
+                   ww1 :: GHC.Types.Int
+                   ww2 :: [(GHC.Types.Int, GHC.Types.Int)] ->
+                 case ww2 of wild {
+                   [] -> Graphics.Gloss.Internals.Data.Picture.Blank
+                   : p ps
+                   -> Graphics.Gloss.Internals.Data.Picture.Pictures
+                        (let {
+                           wild1 :: Snake.World
+                           = Snake.NewWorld
+                               ww
+                               Snake.drawSnake4
+                               ww1
+                               wild
+                               Snake.drawSnake3
+                               Snake.drawSnake2
+                               Snake.drawSnake1
+                         } in
+                         GHC.Types.:
+                           @ Graphics.Gloss.Internals.Data.Picture.Picture
+                           (Graphics.Gloss.Internals.Data.Picture.Color
+                              Graphics.Gloss.Data.Color.blue
+                              (case p of ww3 { (,) ww4 ww5 ->
+                               case Snake.$wdrawBox ww4 ww5 wild1 of ww6 { (#,,#) ww7 ww8 ww9 ->
+                               Graphics.Gloss.Internals.Data.Picture.Translate ww7 ww8 ww9 } }))
+                           (GHC.Base.map
+                              @ (GHC.Types.Int, GHC.Types.Int)
+                              @ Graphics.Gloss.Internals.Data.Picture.Picture
+                              (\ x :: (GHC.Types.Int, GHC.Types.Int) ->
+                               case x of ww3 { (,) ww4 ww5 ->
+                               case Snake.$wdrawBox ww4 ww5 wild1 of ww6 { (#,,#) ww7 ww8 ww9 ->
+                               Graphics.Gloss.Internals.Data.Picture.Translate ww7 ww8 ww9 } })
+                              ps)) }) -}
+e1fc2466f8adeb208dea91919913e22a
+  $wdrawWorld ::
+    Snake.World
+    -> (# [Graphics.Gloss.Internals.Data.Picture.Picture] #)
+  {- Arity: 1,
+     Strictness: <L,U(U(U(U),U(U)),A,U(U),U,1*U,A,U(U(U),U(U)))>,
+     Inline: [0],
+     Unfolding: (\ w :: Snake.World ->
+                 (# GHC.Types.:
+                      @ Graphics.Gloss.Internals.Data.Picture.Picture
+                      (Snake.drawBounds w)
+                      (GHC.Types.:
+                         @ Graphics.Gloss.Internals.Data.Picture.Picture
+                         (Snake.drawFood w)
+                         (GHC.Types.:
+                            @ Graphics.Gloss.Internals.Data.Picture.Picture
+                            (Snake.drawSnake w)
+                            (GHC.Types.:
+                               @ Graphics.Gloss.Internals.Data.Picture.Picture
+                               (Snake.drawGameOver w)
+                               (GHC.Types.[]
+                                  @ Graphics.Gloss.Internals.Data.Picture.Picture)))) #)) -}
+8cacdd964e7a41179fa6e8934ac829ba
+  $winBounds ::
+    GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U><L,U><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Prim.Int#
+                   ww2 :: GHC.Types.Int ->
+                 case GHC.Classes.divInt# ww 2 of ww4 { DEFAULT ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<=# (GHC.Prim.negateInt# ww4) ww1) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# ww1 ww4) of wild1 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww2 of wild2 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# (GHC.Prim.negateInt# ww4) y) of wild3 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# y ww4) } } } } }) -}
+3beb4eac1751414d7580b2b251351459
+  $wisFood ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U><L,1*U(U)><L,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Types.Int
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Types.Int ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==# ww2 ww) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Classes.eqInt ww3 ww1 }) -}
+0953b75dfc9bf31e478d74cc79d786bb
+  $wisSnake ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Int -> GHC.Types.Int -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U><L,U(U)><L,U(U)>,
+     Inline: [0],
+     Unfolding: (\ ww :: [(GHC.Types.Int, GHC.Types.Int)]
+                   ww1 :: GHC.Types.Int
+                   ww2 :: GHC.Types.Int ->
+                 letrec {
+                   go4 :: [(GHC.Types.Int, GHC.Types.Int)] -> Data.Monoid.Any
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ ds :: [(GHC.Types.Int, GHC.Types.Int)] ->
+                     case ds of wild {
+                       [] -> GHC.Types.False `cast` (Sym (Data.Monoid.NTCo:Any[0]))
+                       : y ys
+                       -> case y of ww3 { (,) ww4 ww5 ->
+                          case ww4 of wild1 { GHC.Types.I# x ->
+                          case ww1 of wild2 { GHC.Types.I# y1 ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# x y1) of wild3 {
+                            GHC.Types.False -> go4 ys
+                            GHC.Types.True
+                            -> case ww5 of wild4 { GHC.Types.I# x1 ->
+                               case ww2 of wild5 { GHC.Types.I# y2 ->
+                               case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.==# x1 y2) of wild6 {
+                                 GHC.Types.False -> go4 ys
+                                 GHC.Types.True
+                                 -> GHC.Types.True
+                                      `cast`
+                                    (Sym (Data.Monoid.NTCo:Any[0])) } } } } } } } }
+                 } in
+                 (go4 ww) `cast` (Data.Monoid.NTCo:Any[0])) -}
+277b5cc6c847af21144e165cd104a82a
+  $wmoveFood ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> Snake.Direction
+    -> GHC.Types.Int
+    -> [(GHC.Types.Int, GHC.Types.Int)]
+    -> GHC.Types.Bool
+    -> System.Random.StdGen
+    -> (# (GHC.Types.Int, GHC.Types.Int),
+          Snake.Direction,
+          GHC.Types.Int,
+          [(GHC.Types.Int, GHC.Types.Int)],
+          GHC.Types.Bool,
+          System.Random.StdGen,
+          (GHC.Types.Int, GHC.Types.Int) #)
+  {- Arity: 6, Strictness: <L,U><L,U><L,U(U)><S,U><L,U><L,1*U>,
+     Inline: [0] -}
+4b92b60d7341431d4cb758a5ca7c7209
+  data Direction = North | East | South | West
+    Promotable
+8284520735d5e6a09b47eaa1be6c2af9
+  data World
+    = NewWorld {resolution :: (GHC.Types.Int, GHC.Types.Int),
+                direction :: Snake.Direction,
+                scale :: GHC.Types.Int,
+                snake :: [(GHC.Types.Int, GHC.Types.Int)],
+                isOver :: GHC.Types.Bool,
+                gen :: System.Random.StdGen,
+                food :: (GHC.Types.Int, GHC.Types.Int)}
+72fc8f044af1c47314c598b267317796
+  backgroundColor :: Graphics.Gloss.Internals.Data.Color.Color
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Graphics.Gloss.Data.Color.white -}
+c2921ef439043a0db9a157fc1cea02b6
+  direction :: Snake.World -> Snake.Direction
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLL),1*U(A,1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds2 }) -}
+043f9666db5eaf95906aebe3eb170014
+  displayMode :: Snake.World -> Graphics.Gloss.Data.Display.Display
+  {- Arity: 1, Strictness: <L,1*U(1*U,A,A,A,A,A,A)>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ world :: Snake.World ->
+                 Graphics.Gloss.Data.Display.InWindow
+                   Snake.displayMode3
+                   (case world of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    ds })
+                   Snake.displayMode1) -}
+4bc285e7792e1f2e602ec6cec850b570
+  displayMode1 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.displayMode2, Snake.displayMode2)) -}
+f42047ab20b01f6cd8a377199d8daab9
+  displayMode2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+a55d0445ac52d4677a5d87958c6c0276
+  displayMode3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Snake"#) -}
+c73cf7037beae0d5d0953d932754fe99
+  drawBounds ::
+    Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(1*U(1*U(U),1*U(U)),A,A,A,A,A,A)>m3,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Snake.World ->
+                 case Snake.$wdrawBounds w of ww { (##) ww1 ->
+                 Graphics.Gloss.Internals.Data.Picture.Line ww1 }) -}
+a7d2bcd16570f17e35052209b888f3c9
+  drawBox ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U),1*U(U))><L,1*U(1*U(1*U(U),1*U(U)),A,1*U(U),A,A,A,A)>m11,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: (GHC.Types.Int, GHC.Types.Int) w1 :: Snake.World ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case Snake.$wdrawBox ww1 ww2 w1 of ww3 { (#,,#) ww4 ww5 ww6 ->
+                 Graphics.Gloss.Internals.Data.Picture.Translate ww4 ww5 ww6 } }) -}
+161044bc4542e9531d3a34eb91623af3
+  drawFood ::
+    Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,U(1*U(1*U(U),1*U(U)),A,1*U(U),A,A,A,1*U(1*U(U),1*U(U)))>m10,
+     Unfolding: InlineRule (1, True, False)
+                (\ world :: Snake.World ->
+                 Graphics.Gloss.Internals.Data.Picture.Color
+                   Graphics.Gloss.Data.Color.green
+                   (case world of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    Snake.drawBox ds6 wild })) -}
+010c268f411f2bca3e6c03e4d80e31bf
+  drawGameOver ::
+    Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 1, Strictness: <S(LLLLSLL),1*U(A,A,A,1*U,1*U,A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Snake.World ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Snake.$wdrawGameOver ww4 ww5 }) -}
+d92d8c3e094d8c77996ae45dcdd82d3c
+  drawGameOver1 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# __float 0.2) -}
+79c2e66858d1bd20172f5610079023be
+  drawGameOver2 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# __float -50.0) -}
+1736a885791df99469c7be4e06741a7a
+  drawGameOver3 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.F# __float 0.0) -}
+aec1ae6e21533e1d63f6f9e4153522fa
+  drawGameOver4 :: Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Strictness: m10,
+     Unfolding: (Graphics.Gloss.Internals.Data.Picture.Color
+                   Graphics.Gloss.Data.Color.red
+                   Snake.drawGameOver5) -}
+87636b7e0db2d75e78dddaea39e24431
+  drawGameOver5 :: Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Strictness: m13,
+     Unfolding: (Graphics.Gloss.Internals.Data.Picture.Scale
+                   Snake.drawGameOver1
+                   Snake.drawGameOver1
+                   Snake.drawGameOver6) -}
+c6d6c2c0f4ace2d229910b37d7acf480
+  drawGameOver6 :: Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Strictness: m8,
+     Unfolding: (Graphics.Gloss.Internals.Data.Picture.Text
+                   Snake.drawGameOver7) -}
+a3266e818a2c2b85f257eeaf3c970ec3
+  drawGameOver7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "game over"#) -}
+512bae826be0ff06ecd70844bbbb33b3
+  drawSnake ::
+    Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 1,
+     Strictness: <S(LLLSLLL),1*U(U(U(U),U(U)),A,U(U),1*U,A,A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Snake.World ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 Snake.$wdrawSnake ww1 ww3 ww4 }) -}
+3c487530b296868aa21089361dd45b01
+  drawSnake1 :: (GHC.Types.Int, GHC.Types.Int)
+  {- Strictness: b -}
+639eb1991ca208c5ec6e41c943faedfe
+  drawSnake2 :: System.Random.StdGen
+  {- Strictness: b -}
+7a13d317234096a1c3af5987596d1e4b
+  drawSnake3 :: GHC.Types.Bool
+  {- Strictness: b -}
+76d50bd870f33c5b0bde05e58f7e0978
+  drawSnake4 :: Snake.Direction
+  {- Strictness: b -}
+1054e53673249c3525829baaaec7a905
+  drawWorld ::
+    Snake.World -> Graphics.Gloss.Internals.Data.Picture.Picture
+  {- Arity: 1,
+     Strictness: <L,U(U(U(U),U(U)),A,U(U),U,1*U,A,U(U(U),U(U)))>m14,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Snake.World ->
+                 case Snake.$wdrawWorld w of ww { (##) ww1 ->
+                 Graphics.Gloss.Internals.Data.Picture.Pictures ww1 }) -}
+e6b3d35031454eeb9f223864e314b670
+  food :: Snake.World -> (GHC.Types.Int, GHC.Types.Int)
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLS),1*U(A,A,A,A,A,A,1*U(U,U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds7 }) -}
+ea37c96ef617e93ba8e9c5df95a90835
+  gen :: Snake.World -> System.Random.StdGen
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSL),1*U(A,A,A,A,A,1*U(U,U),A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds6 }) -}
+b3e996fee59fefc8c6e2c795887be5f8
+  handleEvent ::
+    Graphics.Gloss.Internals.Interface.Event.Event
+    -> Snake.World -> Snake.World
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U><S,1*U(U,U,U,U,U,U,U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Graphics.Gloss.Internals.Interface.Event.Event
+                   w1 :: Snake.World ->
+                 case w1 of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case w of wild {
+                   Graphics.Gloss.Internals.Interface.Event.EventKey key state ds ds1
+                   -> case ww5 of wild1 {
+                        GHC.Types.False
+                        -> case state of wild2 {
+                             Graphics.Gloss.Internals.Interface.Backend.Types.Down
+                             -> case key of wild3 {
+                                  DEFAULT -> Snake.NewWorld ww1 ww2 ww3 ww4 GHC.Types.False ww6 ww7
+                                  Graphics.Gloss.Internals.Interface.Backend.Types.SpecialKey ds2
+                                  -> case ds2 of wild4 {
+                                       DEFAULT
+                                       -> Snake.NewWorld ww1 ww2 ww3 ww4 GHC.Types.False ww6 ww7
+                                       Graphics.Gloss.Internals.Interface.Backend.Types.KeyUp
+                                       -> Snake.NewWorld
+                                            ww1
+                                            (case ww2 of wild5 {
+                                               DEFAULT -> Snake.North Snake.South -> Snake.South })
+                                            ww3
+                                            ww4
+                                            GHC.Types.False
+                                            ww6
+                                            ww7
+                                       Graphics.Gloss.Internals.Interface.Backend.Types.KeyDown
+                                       -> Snake.NewWorld
+                                            ww1
+                                            (case ww2 of wild5 {
+                                               Snake.North -> Snake.North
+                                               Snake.East -> Snake.South
+                                               Snake.South -> Snake.South
+                                               Snake.West -> Snake.South })
+                                            ww3
+                                            ww4
+                                            GHC.Types.False
+                                            ww6
+                                            ww7
+                                       Graphics.Gloss.Internals.Interface.Backend.Types.KeyLeft
+                                       -> Snake.NewWorld
+                                            ww1
+                                            (case ww2 of wild5 {
+                                               DEFAULT -> Snake.West Snake.East -> Snake.East })
+                                            ww3
+                                            ww4
+                                            GHC.Types.False
+                                            ww6
+                                            ww7
+                                       Graphics.Gloss.Internals.Interface.Backend.Types.KeyRight
+                                       -> Snake.NewWorld
+                                            ww1
+                                            (case ww2 of wild5 {
+                                               DEFAULT -> Snake.East Snake.West -> Snake.West })
+                                            ww3
+                                            ww4
+                                            GHC.Types.False
+                                            ww6
+                                            ww7 } }
+                             Graphics.Gloss.Internals.Interface.Backend.Types.Up
+                             -> Snake.NewWorld ww1 ww2 ww3 ww4 GHC.Types.False ww6 ww7 }
+                        GHC.Types.True
+                        -> Snake.NewWorld ww1 ww2 ww3 ww4 GHC.Types.True ww6 ww7 }
+                   Graphics.Gloss.Internals.Interface.Event.EventMotion ipv
+                   -> Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7
+                   Graphics.Gloss.Internals.Interface.Event.EventResize newResolution
+                   -> Snake.NewWorld newResolution ww2 ww3 ww4 ww5 ww6 ww7 } }) -}
+230e20cf7699380923e8e3ebe7662573
+  handleKey ::
+    Graphics.Gloss.Internals.Interface.Backend.Types.Key
+    -> Graphics.Gloss.Internals.Interface.Backend.Types.KeyState
+    -> Snake.World
+    -> Snake.World
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U><S,1*U><S,1*U(U,U,U,U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: Graphics.Gloss.Internals.Interface.Backend.Types.Key
+                   w1 :: Graphics.Gloss.Internals.Interface.Backend.Types.KeyState
+                   w2 :: Snake.World ->
+                 case w2 of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case w1 of wild {
+                   Graphics.Gloss.Internals.Interface.Backend.Types.Down
+                   -> case w of wild1 {
+                        DEFAULT -> Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7
+                        Graphics.Gloss.Internals.Interface.Backend.Types.SpecialKey ds
+                        -> case ds of wild2 {
+                             DEFAULT -> Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7
+                             Graphics.Gloss.Internals.Interface.Backend.Types.KeyUp
+                             -> Snake.NewWorld
+                                  ww1
+                                  (case ww2 of wild3 {
+                                     DEFAULT -> Snake.North Snake.South -> Snake.South })
+                                  ww3
+                                  ww4
+                                  ww5
+                                  ww6
+                                  ww7
+                             Graphics.Gloss.Internals.Interface.Backend.Types.KeyDown
+                             -> Snake.NewWorld
+                                  ww1
+                                  (case ww2 of wild3 {
+                                     Snake.North -> Snake.North
+                                     Snake.East -> Snake.South
+                                     Snake.South -> Snake.South
+                                     Snake.West -> Snake.South })
+                                  ww3
+                                  ww4
+                                  ww5
+                                  ww6
+                                  ww7
+                             Graphics.Gloss.Internals.Interface.Backend.Types.KeyLeft
+                             -> Snake.NewWorld
+                                  ww1
+                                  (case ww2 of wild3 {
+                                     DEFAULT -> Snake.West Snake.East -> Snake.East })
+                                  ww3
+                                  ww4
+                                  ww5
+                                  ww6
+                                  ww7
+                             Graphics.Gloss.Internals.Interface.Backend.Types.KeyRight
+                             -> Snake.NewWorld
+                                  ww1
+                                  (case ww2 of wild3 {
+                                     DEFAULT -> Snake.East Snake.West -> Snake.West })
+                                  ww3
+                                  ww4
+                                  ww5
+                                  ww6
+                                  ww7 } }
+                   Graphics.Gloss.Internals.Interface.Backend.Types.Up
+                   -> Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 } }) -}
+fe364048f1407ab0aa6947832c09620a
+  handleResize ::
+    (GHC.Types.Int, GHC.Types.Int) -> Snake.World -> Snake.World
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><S,1*U(A,U,U,U,U,U,U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ newResolution :: (GHC.Types.Int, GHC.Types.Int)
+                   world :: Snake.World ->
+                 case world of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                 Snake.NewWorld newResolution ds1 ds2 ds3 ds4 ds5 ds6 }) -}
+229e46102967448b86067c609a35fe25
+  handleStep :: GHC.Types.Float -> Snake.World -> Snake.World
+  {- Arity: 2,
+     Strictness: <L,A><S(LLLLSLL),1*U(U,U,U(U),U,U,U,U(U(U),U(U)))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Float w1 :: Snake.World ->
+                 case w1 of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case ww5 of wild {
+                   GHC.Types.False
+                   -> case ww3 of ww8 { GHC.Types.I# ww9 ->
+                      case GHC.Classes.divInt# ww9 2 of ww10 { DEFAULT ->
+                      case ww4 of wild1 {
+                        [] -> case GHC.List.init2 ret_ty Snake.World of {}
+                        : x xs
+                        -> case GHC.List.init1
+                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                  x
+                                  xs of wild2 {
+                             [] -> case Snake.handleStep1 ret_ty Snake.World of {}
+                             : ds ds1
+                             -> case ds of wild3 { (,) x1 y ->
+                                case x1 of ww11 { GHC.Types.I# ww12 ->
+                                case ww2 of wild4 {
+                                  Snake.North
+                                  -> let {
+                                       wild5 :: GHC.Types.Int = GHC.Types.I# ww12
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=#
+                                               (GHC.Prim.negateInt# ww10)
+                                               ww12) of wild6 {
+                                       GHC.Types.False
+                                       -> Snake.NewWorld
+                                            ww1
+                                            Snake.North
+                                            ww8
+                                            wild1
+                                            GHC.Types.True
+                                            ww6
+                                            ww7
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.<=# ww12 ww10) of wild7 {
+                                            GHC.Types.False
+                                            -> Snake.NewWorld
+                                                 ww1
+                                                 Snake.North
+                                                 ww8
+                                                 wild1
+                                                 GHC.Types.True
+                                                 ww6
+                                                 ww7
+                                            GHC.Types.True
+                                            -> case y of wild8 { GHC.Types.I# x2 ->
+                                               let {
+                                                 y1 :: GHC.Prim.Int# = GHC.Prim.+# x2 1
+                                               } in
+                                               let {
+                                                 wild9 :: GHC.Types.Int = GHC.Types.I# y1
+                                               } in
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=#
+                                                         (GHC.Prim.negateInt# ww10)
+                                                         y1) of wild10 {
+                                                 GHC.Types.False
+                                                 -> Snake.NewWorld
+                                                      ww1
+                                                      Snake.North
+                                                      ww8
+                                                      wild1
+                                                      GHC.Types.True
+                                                      ww6
+                                                      ww7
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<=# y1 ww10) of wild11 {
+                                                      GHC.Types.False
+                                                      -> Snake.NewWorld
+                                                           ww1
+                                                           Snake.North
+                                                           ww8
+                                                           wild1
+                                                           GHC.Types.True
+                                                           ww6
+                                                           ww7
+                                                      GHC.Types.True
+                                                      -> case Snake.$wisSnake
+                                                                wild1
+                                                                wild5
+                                                                wild9 of wild12 {
+                                                           GHC.Types.False
+                                                           -> case ww7 of ww13 { (,) ww14 ww15 ->
+                                                              case ww14 of wild13 { GHC.Types.I# y2 ->
+                                                              case GHC.Prim.tagToEnum#
+                                                                     @ GHC.Types.Bool
+                                                                     (GHC.Prim.==#
+                                                                        ww12
+                                                                        y2) of wild14 {
+                                                                GHC.Types.False
+                                                                -> Snake.NewWorld
+                                                                     ww1
+                                                                     Snake.North
+                                                                     ww8
+                                                                     (GHC.Types.:
+                                                                        @ (GHC.Types.Int,
+                                                                           GHC.Types.Int)
+                                                                        (wild5, wild9)
+                                                                        wild2)
+                                                                     GHC.Types.False
+                                                                     ww6
+                                                                     ww13
+                                                                GHC.Types.True
+                                                                -> case ww15 of wild15 { GHC.Types.I# y3 ->
+                                                                   case GHC.Prim.tagToEnum#
+                                                                          @ GHC.Types.Bool
+                                                                          (GHC.Prim.==#
+                                                                             y1
+                                                                             y3) of wild16 {
+                                                                     GHC.Types.False
+                                                                     -> Snake.NewWorld
+                                                                          ww1
+                                                                          Snake.North
+                                                                          ww8
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild9)
+                                                                             wild2)
+                                                                          GHC.Types.False
+                                                                          ww6
+                                                                          ww13
+                                                                     GHC.Types.True
+                                                                     -> case Snake.$wmoveFood
+                                                                               ww1
+                                                                               Snake.North
+                                                                               ww8
+                                                                               wild1
+                                                                               GHC.Types.False
+                                                                               ww6 of ww16 { (#,,,,,,#) ww17 ww18 ww19 ww20 ww21 ww22 ww23 ->
+                                                                        Snake.NewWorld
+                                                                          ww17
+                                                                          ww18
+                                                                          ww19
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild9)
+                                                                             wild1)
+                                                                          ww21
+                                                                          ww22
+                                                                          ww23 } } } } } }
+                                                           GHC.Types.True
+                                                           -> Snake.NewWorld
+                                                                ww1
+                                                                Snake.North
+                                                                ww8
+                                                                wild1
+                                                                GHC.Types.True
+                                                                ww6
+                                                                ww7 } } } } } }
+                                  Snake.East
+                                  -> let {
+                                       ww13 :: GHC.Prim.Int# = GHC.Prim.+# ww12 1
+                                     } in
+                                     let {
+                                       wild5 :: GHC.Types.Int = GHC.Types.I# ww13
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=#
+                                               (GHC.Prim.negateInt# ww10)
+                                               ww13) of wild6 {
+                                       GHC.Types.False
+                                       -> Snake.NewWorld
+                                            ww1
+                                            Snake.East
+                                            ww8
+                                            wild1
+                                            GHC.Types.True
+                                            ww6
+                                            ww7
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.<=# ww13 ww10) of wild7 {
+                                            GHC.Types.False
+                                            -> Snake.NewWorld
+                                                 ww1
+                                                 Snake.East
+                                                 ww8
+                                                 wild1
+                                                 GHC.Types.True
+                                                 ww6
+                                                 ww7
+                                            GHC.Types.True
+                                            -> case y of wild8 { GHC.Types.I# y1 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=#
+                                                         (GHC.Prim.negateInt# ww10)
+                                                         y1) of wild9 {
+                                                 GHC.Types.False
+                                                 -> Snake.NewWorld
+                                                      ww1
+                                                      Snake.East
+                                                      ww8
+                                                      wild1
+                                                      GHC.Types.True
+                                                      ww6
+                                                      ww7
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<=# y1 ww10) of wild10 {
+                                                      GHC.Types.False
+                                                      -> Snake.NewWorld
+                                                           ww1
+                                                           Snake.East
+                                                           ww8
+                                                           wild1
+                                                           GHC.Types.True
+                                                           ww6
+                                                           ww7
+                                                      GHC.Types.True
+                                                      -> case Snake.$wisSnake
+                                                                wild1
+                                                                wild5
+                                                                wild8 of wild11 {
+                                                           GHC.Types.False
+                                                           -> case ww7 of ww14 { (,) ww15 ww16 ->
+                                                              case ww15 of wild12 { GHC.Types.I# y2 ->
+                                                              case GHC.Prim.tagToEnum#
+                                                                     @ GHC.Types.Bool
+                                                                     (GHC.Prim.==#
+                                                                        ww13
+                                                                        y2) of wild13 {
+                                                                GHC.Types.False
+                                                                -> Snake.NewWorld
+                                                                     ww1
+                                                                     Snake.East
+                                                                     ww8
+                                                                     (GHC.Types.:
+                                                                        @ (GHC.Types.Int,
+                                                                           GHC.Types.Int)
+                                                                        (wild5, wild8)
+                                                                        wild2)
+                                                                     GHC.Types.False
+                                                                     ww6
+                                                                     ww14
+                                                                GHC.Types.True
+                                                                -> case ww16 of wild14 { GHC.Types.I# y3 ->
+                                                                   case GHC.Prim.tagToEnum#
+                                                                          @ GHC.Types.Bool
+                                                                          (GHC.Prim.==#
+                                                                             y1
+                                                                             y3) of wild15 {
+                                                                     GHC.Types.False
+                                                                     -> Snake.NewWorld
+                                                                          ww1
+                                                                          Snake.East
+                                                                          ww8
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild8)
+                                                                             wild2)
+                                                                          GHC.Types.False
+                                                                          ww6
+                                                                          ww14
+                                                                     GHC.Types.True
+                                                                     -> case Snake.$wmoveFood
+                                                                               ww1
+                                                                               Snake.East
+                                                                               ww8
+                                                                               wild1
+                                                                               GHC.Types.False
+                                                                               ww6 of ww17 { (#,,,,,,#) ww18 ww19 ww20 ww21 ww22 ww23 ww24 ->
+                                                                        Snake.NewWorld
+                                                                          ww18
+                                                                          ww19
+                                                                          ww20
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild8)
+                                                                             wild1)
+                                                                          ww22
+                                                                          ww23
+                                                                          ww24 } } } } } }
+                                                           GHC.Types.True
+                                                           -> Snake.NewWorld
+                                                                ww1
+                                                                Snake.East
+                                                                ww8
+                                                                wild1
+                                                                GHC.Types.True
+                                                                ww6
+                                                                ww7 } } } } } }
+                                  Snake.South
+                                  -> let {
+                                       wild5 :: GHC.Types.Int = GHC.Types.I# ww12
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=#
+                                               (GHC.Prim.negateInt# ww10)
+                                               ww12) of wild6 {
+                                       GHC.Types.False
+                                       -> Snake.NewWorld
+                                            ww1
+                                            Snake.South
+                                            ww8
+                                            wild1
+                                            GHC.Types.True
+                                            ww6
+                                            ww7
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.<=# ww12 ww10) of wild7 {
+                                            GHC.Types.False
+                                            -> Snake.NewWorld
+                                                 ww1
+                                                 Snake.South
+                                                 ww8
+                                                 wild1
+                                                 GHC.Types.True
+                                                 ww6
+                                                 ww7
+                                            GHC.Types.True
+                                            -> case y of wild8 { GHC.Types.I# x2 ->
+                                               let {
+                                                 y1 :: GHC.Prim.Int# = GHC.Prim.-# x2 1
+                                               } in
+                                               let {
+                                                 wild9 :: GHC.Types.Int = GHC.Types.I# y1
+                                               } in
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=#
+                                                         (GHC.Prim.negateInt# ww10)
+                                                         y1) of wild10 {
+                                                 GHC.Types.False
+                                                 -> Snake.NewWorld
+                                                      ww1
+                                                      Snake.South
+                                                      ww8
+                                                      wild1
+                                                      GHC.Types.True
+                                                      ww6
+                                                      ww7
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<=# y1 ww10) of wild11 {
+                                                      GHC.Types.False
+                                                      -> Snake.NewWorld
+                                                           ww1
+                                                           Snake.South
+                                                           ww8
+                                                           wild1
+                                                           GHC.Types.True
+                                                           ww6
+                                                           ww7
+                                                      GHC.Types.True
+                                                      -> case Snake.$wisSnake
+                                                                wild1
+                                                                wild5
+                                                                wild9 of wild12 {
+                                                           GHC.Types.False
+                                                           -> case ww7 of ww13 { (,) ww14 ww15 ->
+                                                              case ww14 of wild13 { GHC.Types.I# y2 ->
+                                                              case GHC.Prim.tagToEnum#
+                                                                     @ GHC.Types.Bool
+                                                                     (GHC.Prim.==#
+                                                                        ww12
+                                                                        y2) of wild14 {
+                                                                GHC.Types.False
+                                                                -> Snake.NewWorld
+                                                                     ww1
+                                                                     Snake.South
+                                                                     ww8
+                                                                     (GHC.Types.:
+                                                                        @ (GHC.Types.Int,
+                                                                           GHC.Types.Int)
+                                                                        (wild5, wild9)
+                                                                        wild2)
+                                                                     GHC.Types.False
+                                                                     ww6
+                                                                     ww13
+                                                                GHC.Types.True
+                                                                -> case ww15 of wild15 { GHC.Types.I# y3 ->
+                                                                   case GHC.Prim.tagToEnum#
+                                                                          @ GHC.Types.Bool
+                                                                          (GHC.Prim.==#
+                                                                             y1
+                                                                             y3) of wild16 {
+                                                                     GHC.Types.False
+                                                                     -> Snake.NewWorld
+                                                                          ww1
+                                                                          Snake.South
+                                                                          ww8
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild9)
+                                                                             wild2)
+                                                                          GHC.Types.False
+                                                                          ww6
+                                                                          ww13
+                                                                     GHC.Types.True
+                                                                     -> case Snake.$wmoveFood
+                                                                               ww1
+                                                                               Snake.South
+                                                                               ww8
+                                                                               wild1
+                                                                               GHC.Types.False
+                                                                               ww6 of ww16 { (#,,,,,,#) ww17 ww18 ww19 ww20 ww21 ww22 ww23 ->
+                                                                        Snake.NewWorld
+                                                                          ww17
+                                                                          ww18
+                                                                          ww19
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild9)
+                                                                             wild1)
+                                                                          ww21
+                                                                          ww22
+                                                                          ww23 } } } } } }
+                                                           GHC.Types.True
+                                                           -> Snake.NewWorld
+                                                                ww1
+                                                                Snake.South
+                                                                ww8
+                                                                wild1
+                                                                GHC.Types.True
+                                                                ww6
+                                                                ww7 } } } } } }
+                                  Snake.West
+                                  -> let {
+                                       ww13 :: GHC.Prim.Int# = GHC.Prim.-# ww12 1
+                                     } in
+                                     let {
+                                       wild5 :: GHC.Types.Int = GHC.Types.I# ww13
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=#
+                                               (GHC.Prim.negateInt# ww10)
+                                               ww13) of wild6 {
+                                       GHC.Types.False
+                                       -> Snake.NewWorld
+                                            ww1
+                                            Snake.West
+                                            ww8
+                                            wild1
+                                            GHC.Types.True
+                                            ww6
+                                            ww7
+                                       GHC.Types.True
+                                       -> case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.<=# ww13 ww10) of wild7 {
+                                            GHC.Types.False
+                                            -> Snake.NewWorld
+                                                 ww1
+                                                 Snake.West
+                                                 ww8
+                                                 wild1
+                                                 GHC.Types.True
+                                                 ww6
+                                                 ww7
+                                            GHC.Types.True
+                                            -> case y of wild8 { GHC.Types.I# y1 ->
+                                               case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=#
+                                                         (GHC.Prim.negateInt# ww10)
+                                                         y1) of wild9 {
+                                                 GHC.Types.False
+                                                 -> Snake.NewWorld
+                                                      ww1
+                                                      Snake.West
+                                                      ww8
+                                                      wild1
+                                                      GHC.Types.True
+                                                      ww6
+                                                      ww7
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<=# y1 ww10) of wild10 {
+                                                      GHC.Types.False
+                                                      -> Snake.NewWorld
+                                                           ww1
+                                                           Snake.West
+                                                           ww8
+                                                           wild1
+                                                           GHC.Types.True
+                                                           ww6
+                                                           ww7
+                                                      GHC.Types.True
+                                                      -> case Snake.$wisSnake
+                                                                wild1
+                                                                wild5
+                                                                wild8 of wild11 {
+                                                           GHC.Types.False
+                                                           -> case ww7 of ww14 { (,) ww15 ww16 ->
+                                                              case ww15 of wild12 { GHC.Types.I# y2 ->
+                                                              case GHC.Prim.tagToEnum#
+                                                                     @ GHC.Types.Bool
+                                                                     (GHC.Prim.==#
+                                                                        ww13
+                                                                        y2) of wild13 {
+                                                                GHC.Types.False
+                                                                -> Snake.NewWorld
+                                                                     ww1
+                                                                     Snake.West
+                                                                     ww8
+                                                                     (GHC.Types.:
+                                                                        @ (GHC.Types.Int,
+                                                                           GHC.Types.Int)
+                                                                        (wild5, wild8)
+                                                                        wild2)
+                                                                     GHC.Types.False
+                                                                     ww6
+                                                                     ww14
+                                                                GHC.Types.True
+                                                                -> case ww16 of wild14 { GHC.Types.I# y3 ->
+                                                                   case GHC.Prim.tagToEnum#
+                                                                          @ GHC.Types.Bool
+                                                                          (GHC.Prim.==#
+                                                                             y1
+                                                                             y3) of wild15 {
+                                                                     GHC.Types.False
+                                                                     -> Snake.NewWorld
+                                                                          ww1
+                                                                          Snake.West
+                                                                          ww8
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild8)
+                                                                             wild2)
+                                                                          GHC.Types.False
+                                                                          ww6
+                                                                          ww14
+                                                                     GHC.Types.True
+                                                                     -> case Snake.$wmoveFood
+                                                                               ww1
+                                                                               Snake.West
+                                                                               ww8
+                                                                               wild1
+                                                                               GHC.Types.False
+                                                                               ww6 of ww17 { (#,,,,,,#) ww18 ww19 ww20 ww21 ww22 ww23 ww24 ->
+                                                                        Snake.NewWorld
+                                                                          ww18
+                                                                          ww19
+                                                                          ww20
+                                                                          (GHC.Types.:
+                                                                             @ (GHC.Types.Int,
+                                                                                GHC.Types.Int)
+                                                                             (wild5, wild8)
+                                                                             wild1)
+                                                                          ww22
+                                                                          ww23
+                                                                          ww24 } } } } } }
+                                                           GHC.Types.True
+                                                           -> Snake.NewWorld
+                                                                ww1
+                                                                Snake.West
+                                                                ww8
+                                                                wild1
+                                                                GHC.Types.True
+                                                                ww6
+                                                                ww7 } } } } } } } } } } } } }
+                   GHC.Types.True
+                   -> Snake.NewWorld ww1 ww2 ww3 ww4 GHC.Types.True ww6 ww7 } }) -}
+8962bbfb0c01320264eefbc8511f07f8
+  handleStep1 ::
+    ([(GHC.Types.Int, GHC.Types.Int)], GHC.Types.Int, GHC.Types.Int)
+  {- Strictness: b -}
+91c194e3dfafcab106930fd95527b656
+  inBounds ::
+    Snake.World -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLSLLLL),1*U(A,A,1*U(U),A,A,A,A)><S(SL),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Snake.World w1 :: (GHC.Types.Int, GHC.Types.Int) ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case ww3 of ww8 { GHC.Types.I# ww9 ->
+                 case w1 of ww10 { (,) ww11 ww12 ->
+                 case ww11 of ww13 { GHC.Types.I# ww14 ->
+                 Snake.$winBounds ww9 ww14 ww12 } } } }) -}
+a377a8732888f23706967ffb67983078
+  initialWorld :: GHC.Types.Int -> Snake.World
+  {- Arity: 1, Strictness: <L,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ seed :: GHC.Types.Int ->
+                 Snake.moveFood
+                   (Snake.NewWorld
+                      Snake.initialWorld15
+                      Snake.North
+                      Snake.initialWorld14
+                      Snake.initialWorld1
+                      GHC.Types.False
+                      (System.Random.mkStdGen seed)
+                      Snake.displayMode1)) -}
+30dc7ce5684a92254f256258bc634e5b
+  initialWorld1 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Snake.initialWorld12
+                   Snake.initialWorld2) -}
+8170a6a7cd33db8491f7e14abe95710c
+  initialWorld10 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.displayMode2, Snake.initialWorld11)) -}
+0c7731b648feefe5da06c8e153b44a4c
+  initialWorld11 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1) -}
+712f50e69daaf1ec6fccb7f92d9774a0
+  initialWorld12 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.displayMode2, Snake.initialWorld13)) -}
+dcb5753bf63fc242cc6c212580e7dd4a
+  initialWorld13 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2) -}
+776d91cf71369180639a2f563796c200
+  initialWorld14 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 30) -}
+17a03ed395b1b070204cf34d35a54e06
+  initialWorld15 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.initialWorld16, Snake.initialWorld16)) -}
+1564b3d74e3922ceb5b53ded22dc153c
+  initialWorld16 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 512) -}
+bf78f1fe9228a6ba83daf95dd4edcbd7
+  initialWorld2 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Snake.initialWorld10
+                   Snake.initialWorld3) -}
+766412f93958fd95ef99bfbaf1f12287
+  initialWorld3 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Snake.displayMode1
+                   Snake.initialWorld4) -}
+ccd4abc8a9420361f734bb2b1a30f302
+  initialWorld4 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Snake.initialWorld8
+                   Snake.initialWorld5) -}
+8a9e6909a993248112ce05ee1077d646
+  initialWorld5 :: [(GHC.Types.Int, GHC.Types.Int)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, GHC.Types.Int)
+                   Snake.initialWorld6
+                   (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int))) -}
+7f4cc11a275dd99e54d42c401a36de01
+  initialWorld6 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.displayMode2, Snake.initialWorld7)) -}
+c9a9f87a48e0ab52250894b17d02eea2
+  initialWorld7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# (-2)) -}
+9daddefcbf0422638b4a0298309adcc8
+  initialWorld8 :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Snake.displayMode2, Snake.initialWorld9)) -}
+7bafde421a2f4e53d50105e775fea957
+  initialWorld9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# (-1)) -}
+d1978591c34916d89c2a52dc147da2b2
+  isFood ::
+    Snake.World -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLS(SL)),1*U(A,A,A,A,A,A,1*U(1*U(U),1*U(U)))><S(SL),1*U(1*U(U),1*U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Snake.World w1 :: (GHC.Types.Int, GHC.Types.Int) ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case ww7 of ww8 { (,) ww9 ww10 ->
+                 case ww9 of ww11 { GHC.Types.I# ww12 ->
+                 case w1 of ww13 { (,) ww14 ww15 ->
+                 case ww14 of ww16 { GHC.Types.I# ww17 ->
+                 Snake.$wisFood ww12 ww10 ww17 ww15 } } } } }) -}
+b87a1b4bbc3320d9cc8f6a18ea3d9793
+  isOver :: Snake.World -> GHC.Types.Bool
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLL),1*U(A,A,A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds5 }) -}
+2fd07f3404554f2759e023a1a53073a8
+  isSnake ::
+    Snake.World -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLSLLL),1*U(A,A,A,1*U,A,A,A)><S,1*U(U(U),U(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Snake.World w1 :: (GHC.Types.Int, GHC.Types.Int) ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case w1 of ww8 { (,) ww9 ww10 ->
+                 Snake.$wisSnake ww4 ww9 ww10 } }) -}
+9e16a63af1eb3d2b6fd5d8c4340fd1b7
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Snake.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+2bc27e22cd2e7865c4e00f1be39c3b17
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case System.Random.theStdGen
+                        `cast`
+                      (GHC.IORef.NTCo:IORef[0] <System.Random.StdGen>_N) of wild { GHC.STRef.STRef r# ->
+                 case GHC.Prim.atomicModifyMutVar#
+                        @ GHC.Prim.RealWorld
+                        @ System.Random.StdGen
+                        @ (System.Random.StdGen, GHC.Types.Int)
+                        @ GHC.Types.Int
+                        r#
+                        System.Random.$fRandomInt2
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of b1 { GHC.Types.I# ipv2 ->
+                 let {
+                   world :: Snake.World
+                   = case Snake.$wmoveFood
+                            Snake.initialWorld15
+                            Snake.North
+                            Snake.initialWorld14
+                            Snake.initialWorld1
+                            GHC.Types.False
+                            (case GHC.Int.$w$cdivMod1
+                                    (GHC.Prim.word2Int#
+                                       (GHC.Prim.and#
+                                          (GHC.Prim.int2Word# (GHC.Prim.narrow32Int# ipv2))
+                                          __word 2147483647))
+                                    2147483562 of ww4 { (#,#) ww5 ww6 ->
+                             case ww6 of wild1 { GHC.Int.I32# x# ->
+                             case ww5 of ww2 { GHC.Int.I32# ww3 ->
+                             case GHC.Classes.modInt# ww3 2147483398 of wild2 { DEFAULT ->
+                             System.Random.StdGen
+                               (GHC.Prim.narrow32Int# (GHC.Prim.+# x# 1))
+                               (GHC.Prim.narrow32Int#
+                                  (GHC.Prim.+#
+                                     (GHC.Prim.narrow32Int# wild2)
+                                     1)) } } } }) of ww { (#,,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                     Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 }
+                 } in
+                 Graphics.Gloss.Internals.Interface.Game.playWithBackendIO1
+                   @ Snake.World
+                   @ Graphics.Gloss.Internals.Interface.Backend.GLUT.GLUTState
+                   Graphics.Gloss.Internals.Interface.Backend.GLUT.$fBackendGLUTState
+                   Graphics.Gloss.Internals.Interface.Backend.GLUT.GLUTState
+                   (Graphics.Gloss.Data.Display.InWindow
+                      Snake.displayMode3
+                      (case world of wild1 { Snake.NewWorld ds ds2 ds3 ds4 ds5 ds6 ds7 ->
+                       ds })
+                      Snake.displayMode1)
+                   Graphics.Gloss.Data.Color.white
+                   Snake.stepRate
+                   world
+                   Snake.main4
+                     `cast`
+                   (<Snake.World>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0]
+                                  <Graphics.Gloss.Internals.Data.Picture.Picture>_R))
+                   Snake.main3
+                     `cast`
+                   (<Graphics.Gloss.Internals.Interface.Event.Event>_R
+                    ->_R <Snake.World>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0] <Snake.World>_R))
+                   Snake.main2
+                     `cast`
+                   (<GHC.Types.Float>_R
+                    ->_R <Snake.World>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0] <Snake.World>_R))
+                   GHC.Types.True
+                   ipv } } }) -}
+1befc09e8bd8fb939d16a3fbb56f6fa0
+  main2 ::
+    GHC.Types.Float
+    -> Snake.World
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Snake.World #)
+  {- Arity: 3,
+     Unfolding: (\ time :: GHC.Types.Float
+                   world1 :: Snake.World
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 (# s, Snake.handleStep time world1 #)) -}
+12ed3e88031e3acef1e4d88cbbe8e414
+  main3 ::
+    Graphics.Gloss.Internals.Interface.Event.Event
+    -> Snake.World
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Snake.World #)
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ event :: Graphics.Gloss.Internals.Interface.Event.Event
+                   world1 :: Snake.World[OneShot]
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 (# s, Snake.handleEvent event world1 #)) -}
+de01da15b3f7e4e32d125efd5af87575
+  main4 ::
+    Snake.World
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Graphics.Gloss.Internals.Data.Picture.Picture #)
+  {- Arity: 2,
+     Unfolding: (\ x :: Snake.World
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 (# s, Snake.drawWorld x #)) -}
+87f739b7588251916aae0265e8eee13d
+  moveFood :: Snake.World -> Snake.World
+  {- Arity: 1, Strictness: <S(LLLSLLL),U(U,U,U(U),U,U,1*U,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Snake.World ->
+                 case w of ww { Snake.NewWorld ww1 ww2 ww3 ww4 ww5 ww6 ww7 ->
+                 case Snake.$wmoveFood
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6 of ww8 { (#,,,,,,#) ww9 ww10 ww11 ww12 ww13 ww14 ww15 ->
+                 Snake.NewWorld ww9 ww10 ww11 ww12 ww13 ww14 ww15 } }) -}
+d03e51c302a26413e49d9a7efa5bffe4
+  resolution :: Snake.World -> (GHC.Types.Int, GHC.Types.Int)
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLL),1*U(1*U(U,U),A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds1 }) -}
+d18fdac6f1e769e9581f4fe0d454b657
+  scale :: Snake.World -> GHC.Types.Int
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLL),1*U(A,A,1*U(U),A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds3 }) -}
+9535e9ed9b081d53215aff1dc0c9362e
+  size :: GHC.Num.Num a => Snake.World -> a
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LLLLLLC(S)),1*U(A,A,A,A,A,A,1*C1(U))><L,1*U(1*U(1*U(U),1*U(U)),A,A,A,A,A,A)>,
+     Unfolding: (\ @ a2 $dNum :: GHC.Num.Num a2 world :: Snake.World ->
+                 GHC.Num.fromInteger
+                   @ a2
+                   $dNum
+                   (case world of wild { Snake.NewWorld ds ds1 ds2 ds3 ds4 ds5 ds6 ->
+                    case ds of wild1 { (,) width height ->
+                    case width of wild2 { GHC.Types.I# x1 ->
+                    case height of wild3 { GHC.Types.I# y1 ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<=# x1 y1) of wild4 {
+                      GHC.Types.False -> GHC.Integer.Type.smallInteger y1
+                      GHC.Types.True -> GHC.Integer.Type.smallInteger x1 } } } } })) -}
+fae96b9f917e241bb32b7f912d898bf8
+  snake :: Snake.World -> [(GHC.Types.Int, GHC.Types.Int)]
+  RecSel Snake.World
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLL),1*U(A,A,A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Snake.World ->
+                 case ds of wild { Snake.NewWorld ds1 ds2 ds3 ds4 ds5 ds6 ds7 ->
+                 ds4 }) -}
+ea5421a28994a5d01baa92be134ea1ec
+  stepRate :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5) -}
+instance GHC.Enum.Bounded [Snake.Direction]
+  = Snake.$fBoundedDirection
+instance GHC.Enum.Enum [Snake.Direction] = Snake.$fEnumDirection
+instance GHC.Classes.Eq [Snake.Direction] = Snake.$fEqDirection
+instance GHC.Classes.Ord [Snake.Direction] = Snake.$fOrdDirection
+instance GHC.Read.Read [Snake.Direction] = Snake.$fReadDirection
+instance GHC.Read.Read [Snake.World] = Snake.$fReadWorld
+instance GHC.Show.Show [Snake.Direction] = Snake.$fShowDirection
+instance GHC.Show.Show [Snake.World] = Snake.$fShowWorld
+"SPEC/Snake $dmreadsPrec @ Direction" [ALWAYS] forall $dRead :: GHC.Read.Read
+                                                                  Snake.Direction
+  GHC.Read.$dmreadsPrec @ Snake.Direction $dRead
+  = Snake.$fReadDirection_$s$dmreadsPrec
+"SPEC/Snake $dmreadsPrec @ World" [ALWAYS] forall $dRead :: GHC.Read.Read
+                                                              Snake.World
+  GHC.Read.$dmreadsPrec @ Snake.World $dRead
+  = Snake.$fReadWorld_$s$dmreadsPrec
+"SPEC/Snake readListDefault @ Direction" [ALWAYS] forall $dRead :: GHC.Read.Read
+                                                                     Snake.Direction
+  GHC.Read.readListDefault @ Snake.Direction $dRead
+  = Snake.$fReadDirection_$sreadListDefault
+"SPEC/Snake readListDefault @ World" [ALWAYS] forall $dRead :: GHC.Read.Read
+                                                                 Snake.World
+  GHC.Read.readListDefault @ Snake.World $dRead
+  = Snake.$fReadWorld_$sreadListDefault
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
